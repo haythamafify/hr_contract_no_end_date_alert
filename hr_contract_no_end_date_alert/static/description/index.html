@@ -1,0 +1,437 @@
+<style>
+  .hcnda-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #24313d;
+    line-height: 1.7;
+  }
+
+  .hcnda-card,
+  .hcnda-hero,
+  .hcnda-support {
+    background: #ffffff;
+    border: 1px solid #dde7e1;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(18, 53, 41, 0.08);
+  }
+
+  .hcnda-banner {
+    margin-bottom: 22px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .hcnda-banner img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .hcnda-hero {
+    padding: 30px;
+    margin-bottom: 22px;
+  }
+
+  .hcnda-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #eaf5ef;
+    color: #0f4c3a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hcnda-title {
+    margin: 0 0 12px;
+    font-size: 34px;
+    line-height: 1.25;
+    color: #123529;
+  }
+
+  .hcnda-lead {
+    margin: 0 0 18px;
+    font-size: 17px;
+    color: #5a6674;
+  }
+
+  .hcnda-tags {
+    margin-top: 16px;
+  }
+
+  .hcnda-tag {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #dde7e1;
+    background: #f8fbf9;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .hcnda-grid {
+    font-size: 0;
+    margin: 0 -10px;
+  }
+
+  .hcnda-col-6,
+  .hcnda-col-12 {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .hcnda-col-6 {
+    width: 50%;
+  }
+
+  .hcnda-col-12 {
+    width: 100%;
+  }
+
+  .hcnda-card {
+    padding: 26px;
+    height: 100%;
+  }
+
+  .hcnda-section-title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #123529;
+  }
+
+  .hcnda-text {
+    margin: 0 0 16px;
+    color: #5a6674;
+  }
+
+  .hcnda-list,
+  .hcnda-steps,
+  .hcnda-checks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hcnda-list li,
+  .hcnda-checks li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+    position: relative;
+    color: #5a6674;
+  }
+
+  .hcnda-list li:before,
+  .hcnda-checks li:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d97706;
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+
+  .hcnda-list strong,
+  .hcnda-checks strong,
+  .hcnda-table strong,
+  .hcnda-steps strong {
+    color: #24313d;
+  }
+
+  .hcnda-mini {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 8px);
+    margin: 0 8px 10px 0;
+    padding: 16px;
+    border: 1px solid #dde7e1;
+    border-radius: 14px;
+    background: #f8fbf9;
+  }
+
+  .hcnda-mini h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #123529;
+  }
+
+  .hcnda-mini p {
+    margin: 0;
+    color: #5a6674;
+    font-size: 14px;
+  }
+
+  .hcnda-step {
+    padding: 14px 0;
+    border-bottom: 1px solid #e2ebe5;
+  }
+
+  .hcnda-step:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .hcnda-step-no {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background: #0f4c3a;
+    color: #ffffff;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: top;
+  }
+
+  .hcnda-step-text {
+    display: inline-block;
+    width: calc(100% - 52px);
+    color: #5a6674;
+  }
+
+  .hcnda-note {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #fff4df;
+    border: 1px solid #f3d19e;
+    color: #7b4a08;
+    font-size: 14px;
+  }
+
+  .hcnda-code {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: #eef5f1;
+    color: #0f4c3a;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+  }
+
+  .hcnda-table-wrap {
+    overflow-x: auto;
+  }
+
+  .hcnda-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dde7e1;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .hcnda-table th,
+  .hcnda-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #dde7e1;
+    vertical-align: top;
+    font-size: 14px;
+  }
+
+  .hcnda-table th {
+    background: #edf6f1;
+    color: #123529;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 13px;
+  }
+
+  .hcnda-table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .hcnda-support {
+    padding: 26px;
+  }
+
+  .hcnda-support p {
+    margin: 0 0 10px;
+    color: #5a6674;
+  }
+
+  .hcnda-support a {
+    color: #0f4c3a;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .hcnda-col-6,
+    .hcnda-col-12 {
+      width: 100%;
+    }
+
+    .hcnda-mini {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .hcnda-title {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<div class="hcnda-wrap">
+  <div class="hcnda-banner">
+    <img src="banner.svg" alt="HR Contract No End Date Alert">
+  </div>
+
+  <div class="hcnda-hero">
+    <div class="hcnda-badge">Odoo 18 HR Module</div>
+    <h1 class="hcnda-title">HR Contract No End Date Alert</h1>
+    <p class="hcnda-lead">
+      Prevent accidental open-ended employee contracts with a save confirmation popup,
+      automatic Chatter tracking, and a dedicated filter to review contracts without an end date.
+    </p>
+    <div class="hcnda-tags">
+      <span class="hcnda-tag">Odoo 18.0</span>
+      <span class="hcnda-tag">Human Resources</span>
+      <span class="hcnda-tag">LGPL-3</span>
+      <span class="hcnda-tag">Arabic &amp; English</span>
+      <span class="hcnda-tag">Version 18.0.1.0.0</span>
+    </div>
+  </div>
+
+  <div class="hcnda-grid">
+    <div class="hcnda-col-6">
+      <div class="hcnda-card">
+        <h2 class="hcnda-section-title">Why This Module</h2>
+        <p class="hcnda-text">
+          This module helps HR teams avoid saving contracts without an end date by mistake,
+          while still allowing that workflow when it is intentionally needed.
+        </p>
+        <ul class="hcnda-list">
+          <li><strong>Save confirmation popup</strong> when the End Date field is empty.</li>
+          <li><strong>Automatic Chatter log</strong> to document the decision.</li>
+          <li><strong>Quick search filter</strong> for contracts without an end date.</li>
+          <li><strong>Visual highlighting</strong> of the missing End Date field.</li>
+          <li><strong>Translation-ready</strong> with Arabic and English support.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hcnda-col-6">
+      <div class="hcnda-card">
+        <h2 class="hcnda-section-title">Highlights</h2>
+        <div class="hcnda-mini">
+          <h3>Safe Save Flow</h3>
+          <p>Users must confirm before saving an open-ended contract.</p>
+        </div>
+        <div class="hcnda-mini">
+          <h3>Audit Visibility</h3>
+          <p>Every approved exception can be reviewed later in Chatter.</p>
+        </div>
+        <div class="hcnda-mini">
+          <h3>No Extra Setup</h3>
+          <p>Install and use it immediately with the standard HR contract flow.</p>
+        </div>
+        <div class="hcnda-mini">
+          <h3>Fast Review</h3>
+          <p>Managers can filter and inspect all open-ended contracts quickly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hcnda-col-6">
+      <div class="hcnda-card">
+        <h2 class="hcnda-section-title">How It Works</h2>
+        <div class="hcnda-steps">
+          <div class="hcnda-step">
+            <span class="hcnda-step-no">1</span>
+            <div class="hcnda-step-text"><strong>Create or edit</strong> an HR contract normally.</div>
+          </div>
+          <div class="hcnda-step">
+            <span class="hcnda-step-no">2</span>
+            <div class="hcnda-step-text"><strong>Leave End Date empty</strong> and click save.</div>
+          </div>
+          <div class="hcnda-step">
+            <span class="hcnda-step-no">3</span>
+            <div class="hcnda-step-text"><strong>Confirm the popup</strong> if you want to continue with an open-ended contract.</div>
+          </div>
+          <div class="hcnda-step">
+            <span class="hcnda-step-no">4</span>
+            <div class="hcnda-step-text"><strong>Review Chatter and filters</strong> later for audit and follow-up.</div>
+          </div>
+        </div>
+        <div class="hcnda-note">
+          Best for companies that want flexibility without losing visibility over open-ended contracts.
+        </div>
+      </div>
+    </div>
+
+    <div class="hcnda-col-6">
+      <div class="hcnda-card">
+        <h2 class="hcnda-section-title">Installation</h2>
+        <p class="hcnda-text">Standard Odoo installation steps are enough.</p>
+        <ul class="hcnda-checks">
+          <li><strong>Copy</strong> the module into your custom addons path.</li>
+          <li><strong>Restart</strong> the Odoo server.</li>
+          <li><strong>Update Apps List</strong> from the Apps menu.</li>
+          <li><strong>Search for</strong> <span class="hcnda-code">HR Contract No End Date Alert</span>.</li>
+          <li><strong>Install</strong> the module and open any employee contract.</li>
+        </ul>
+        <div class="hcnda-note">
+          Dependency: <span class="hcnda-code">hr_contract</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hcnda-col-12">
+      <div class="hcnda-card">
+        <h2 class="hcnda-section-title">Module Structure</h2>
+        <p class="hcnda-text">Focused implementation across Python, XML, JavaScript, and translations.</p>
+        <div class="hcnda-table-wrap">
+          <table class="hcnda-table">
+            <tr>
+              <th>File</th>
+              <th>Purpose</th>
+            </tr>
+            <tr>
+              <td><span class="hcnda-code">models/hr_contract.py</span></td>
+              <td>Adds the tracking field and posts Chatter messages for contracts saved without an end date.</td>
+            </tr>
+            <tr>
+              <td><span class="hcnda-code">views/hr_contract_views.xml</span></td>
+              <td>Updates the contract form and adds the search filter for contracts without an end date.</td>
+            </tr>
+            <tr>
+              <td><span class="hcnda-code">static/src/js/hr_contract_form.js</span></td>
+              <td>Intercepts save and shows the confirmation popup in the web client.</td>
+            </tr>
+            <tr>
+              <td><span class="hcnda-code">i18n/ar_001.po</span></td>
+              <td>Arabic translations for user-facing text.</td>
+            </tr>
+            <tr>
+              <td><span class="hcnda-code">static/description/index.html</span></td>
+              <td>HTML description used for the Odoo Apps Store page.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hcnda-support">
+    <h2 class="hcnda-section-title">Author &amp; Support</h2>
+    <p><strong>Author:</strong> Haytham Afify</p>
+    <p><strong>Email:</strong> <a href="mailto:haythamgamal6@gmail.com">haythamgamal6@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/haythamafify">github.com/haythamafify</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/haytham-gamal-4165797a/">linkedin.com/in/haytham-gamal-4165797a</a></p>
+  </div>
+</div>
