@@ -19,6 +19,7 @@
             'hr_contract_no_end_date_alert/static/src/js/hr_contract_form.js',
         ],
     },
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
